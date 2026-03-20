@@ -49,7 +49,7 @@ const CoursesSection = () => (
                 ))}
               </ul>
               <a
-                href="#contact"
+                href="#enquiry"
                 className="flex items-center justify-center gap-2 px-5 py-3 bg-accent text-accent-foreground rounded-lg text-sm font-semibold hover:opacity-90 transition-all active:scale-[0.98]"
               >
                 Join Batch <ArrowRight size={16} />

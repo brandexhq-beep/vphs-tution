@@ -1,7 +1,6 @@
 import { Phone, ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
 import BlurReveal from "./BlurReveal";
-import classroomHero from "@/assets/classroom-hero.jpg";
 
 const HeroSection = () => (
   <section id="home" className="relative min-h-[95vh] flex items-center pt-24 bg-background overflow-hidden">
@@ -10,13 +9,13 @@ const HeroSection = () => (
     
     <div className="container mx-auto grid lg:grid-cols-2 gap-16 items-center py-12 relative z-10 px-4">
       <BlurReveal>
-        <motion.span 
+        <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="text-primary font-bold tracking-[0.3em] text-[10px] uppercase mb-6 block"
+          className="inline-block bg-primary/10 text-primary font-black tracking-widest text-sm md:text-lg lg:text-xl uppercase px-5 py-2.5 rounded-2xl border border-primary/20 mb-6 drop-shadow-sm"
         >
           Unit of Vignan Public High School
-        </motion.span>
+        </motion.div>
         <h1 className="text-5xl sm:text-6xl lg:text-8xl font-black text-foreground mb-8 leading-[0.9] tracking-tighter">
           Shaping <br />
           <span className="text-primary italic">Future</span> <br />
@@ -27,7 +26,7 @@ const HeroSection = () => (
         </p>
         <div className="flex flex-col sm:flex-row gap-5">
           <motion.a
-            href="#contact"
+            href="#enquiry"
             whileHover={{ scale: 1.05, boxShadow: "0 20px 40px -10px rgba(var(--primary), 0.3)" }}
             whileTap={{ scale: 0.95 }}
             className="px-10 py-5 bg-primary text-primary-foreground rounded-2xl font-bold shadow-2xl hover:bg-primary/95 transition-all text-center text-lg"
@@ -47,15 +46,21 @@ const HeroSection = () => (
       </BlurReveal>
 
       <BlurReveal delay={0.3} className="relative">
-        <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-[0_40px_80px_-15px_rgba(0,0,0,0.3)] border-8 border-white dark:border-slate-900 group">
-          <img
-            src={classroomHero}
-            alt="Vignan Tutorials classroom"
-            className="w-full h-full object-cover aspect-[4/5] lg:aspect-square group-hover:scale-105 transition-transform duration-700"
+        <motion.div 
+          className="relative z-10 flex items-center justify-center p-4 group"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.img
+            src="/tuition_logo.png"
+            alt="Vignan Tutorials Logo"
+            className="w-full h-full max-w-[500px] object-contain cursor-pointer"
+            whileHover={{ scale: 1.08, rotate: 2, filter: "drop-shadow(0 25px 35px rgba(var(--primary), 0.4))" }}
+            transition={{ type: "spring", stiffness: 300, damping: 15 }}
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-        </div>
+        </motion.div>
         
         {/* Achievement Badge */}
         <motion.div 

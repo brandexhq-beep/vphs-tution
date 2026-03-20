@@ -17,12 +17,12 @@ const ContactSection = () => (
               <div>
                 <h3 className="font-bold text-foreground mb-1">Address</h3>
                 <a
-                  href="https://maps.app.goo.gl/ZVsZgMs2JCbziK7o8"
+                  href="https://maps.app.goo.gl/puFQUf1RePi2eua69"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-accent transition-colors text-sm"
                 >
-                  Vignan Tutorials, Bangalore, Karnataka
+                  Above Anjaneya Electricals, R.T. Street, B.V.K. Iyengar Road, Bangalore-560053
                 </a>
               </div>
             </div>
@@ -53,7 +53,7 @@ const ContactSection = () => (
         <BlurReveal delay={0.2}>
           <div className="rounded-2xl overflow-hidden shadow-card border border-border h-[300px] lg:h-full min-h-[300px] grayscale hover:grayscale-0 transition-all duration-500">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5!2d77.59!3d12.97!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzEyLjAiTiA3N8KwMzUnMjQuMCJF!5e0!3m2!1sen!2sin!4v1"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3514335668333!2d77.5165349!3d13.013278200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d01e6ba3ac9%3A0xef2e35891bf830e1!2sVignan%20Public%20High%20School!5e0!3m2!1sen!2sin!4v1774034592721!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}

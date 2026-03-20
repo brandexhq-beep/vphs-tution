@@ -13,10 +13,10 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-primary rounded-lg shadow-lg">
-                <GraduationCap className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center p-1 overflow-hidden">
+                <img src="/tuition_logo.png" alt="Vignan Logo" className="w-full h-full object-contain" />
               </div>
-              <span className="font-bold text-xl tracking-tight">Vignan Tutorials</span>
+              <span className="font-extrabold text-2xl tracking-tighter text-white">VIGNAN<br/><span className="text-[10px] text-primary tracking-[0.3em] uppercase block -mt-1">Tutorials</span></span>
             </div>
             <p className="text-primary-foreground/60 leading-relaxed max-w-xs">
               Empowering students with quality education. Unit of Vignan Public High School, Bangalore. Shaping future toppers since 2014.
@@ -44,7 +44,7 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-white mb-6 text-sm uppercase tracking-wider">Explore</h4>
             <div className="flex flex-col gap-3">
-              {["Home", "About", "Courses", "Results", "Faculty", "Gallery"].map((link) => (
+              {["Home", "About", "Courses", "Results", "Faculty", "Contact"].map((link) => (
                 <a
                   key={link}
                   href={`#${link.toLowerCase()}`}
@@ -72,29 +72,28 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Contact Column */}
           <div>
             <h4 className="font-bold text-white mb-6 text-sm uppercase tracking-wider">Get in Touch</h4>
             <div className="space-y-4">
-              <a 
-                href="mailto:info@vignantutorials.com" 
+              <a
+                href="tel:9972235286"
                 className="flex items-center gap-3 text-[15px] text-primary-foreground/60 hover:text-white transition-all group"
               >
-                <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-primary transition-colors">
                   <Phone size={14} />
                 </div>
-                <span>9972235286</span>
+                <span>9972235286 / 9632163308</span>
               </a>
-              <a 
-                href="https://maps.app.goo.gl/ZVsZgMs2JCbziK7o8"
+              <a
+                href="https://maps.app.goo.gl/puFQUf1RePi2eua69"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-3 text-[15px] text-primary-foreground/60 hover:text-white transition-all group"
               >
-                <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-primary/20 transition-colors mt-1">
+                <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-primary transition-colors mt-1">
                   <MapPin size={14} />
                 </div>
-                <span>Vignan Tutorials, Bangalore,<br />Karnataka 560001</span>
+                <span>Above Anjaneya Electricals, R.T. Street, B.V.K. Iyengar Road, Bangalore-560053</span>
               </a>
             </div>
           </div>
@@ -119,7 +118,7 @@ const Footer = () => {
           </motion.button>
         </div>
       </div>
-      
+
       {/* Decorative Gradient Overlay */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
     </footer>

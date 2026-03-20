@@ -6,7 +6,6 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import ResultsSection from "@/components/ResultsSection";
 import AdmissionsBanner from "@/components/AdmissionsBanner";
 import FacultySection from "@/components/FacultySection";
-import GallerySection from "@/components/GallerySection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import EnquiryForm from "@/components/EnquiryForm";
 import BatchTimings from "@/components/BatchTimings";
@@ -24,7 +23,6 @@ const Index = () => (
     <ResultsSection />
     <AdmissionsBanner />
     <FacultySection />
-    <GallerySection />
     <TestimonialsSection />
     <EnquiryForm />
     <BatchTimings />

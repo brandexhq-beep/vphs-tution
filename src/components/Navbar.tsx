@@ -17,7 +17,7 @@ const navLinks = [
   },
   { label: "Results", href: "#results" },
   { label: "Faculty", href: "#faculty" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -60,9 +60,13 @@ const Navbar = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <div className={`p-2 rounded-xl bg-primary shadow-lg shadow-primary/20 group-hover:rotate-6 transition-transform duration-300`}>
-              <GraduationCap className="w-7 h-7 text-white" />
-            </div>
+            <motion.div 
+              className={`w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center`}
+              whileHover={{ rotate: [-5, 5, -5, 0], scale: 1.1 }}
+              transition={{ duration: 0.4 }}
+            >
+              <img src="/tuition_logo.png" alt="Vignan Tutorials Logo" className="w-full h-full object-contain drop-shadow-md" />
+            </motion.div>
             <div className="flex flex-col">
               <span className="font-bold text-xl text-foreground tracking-tighter leading-none">VIGNAN</span>
               <span className="text-[10px] font-bold text-primary tracking-[0.2em] uppercase mt-0.5">Tutorials</span>
@@ -125,7 +129,7 @@ const Navbar = () => {
             
             <div className="ml-4 pl-4 border-l border-border/50">
               <motion.a
-                href="#contact"
+                href="#enquiry"
                 whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(var(--primary), 0.4)" }}
                 whileTap={{ scale: 0.95 }}
                 className="px-6 py-3 bg-primary text-primary-foreground rounded-full text-[14px] font-bold shadow-lg flex items-center gap-2 hover:bg-primary/95 transition-all"
@@ -201,7 +205,7 @@ const Navbar = () => {
                   ))}
                   <div className="mt-8">
                     <motion.a
-                      href="#contact"
+                      href="#enquiry"
                       className="w-full py-4 bg-primary text-primary-foreground rounded-2xl text-lg font-bold text-center shadow-xl block"
                       onClick={() => setOpen(false)}
                     >
