@@ -5,7 +5,7 @@ import Counter from "./Counter";
 const stats = [
   { icon: Award, value: "10+", label: "Years Experience" },
   { icon: Users, value: "1000+", label: "Students Trained" },
-  { icon: TrendingUp, value: "95%", label: "Results" },
+  { icon: TrendingUp, value: "98%", label: "Results" },
   { icon: Trophy, value: "50+", label: "Top Scorers" },
 ];
 
@@ -14,7 +14,7 @@ const StatsSection = () => (
     {/* Decorative background circles */}
     <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
     <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
-    
+
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 lg:gap-16">
         {stats.map((stat, i) => (

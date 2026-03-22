@@ -9,18 +9,18 @@ interface CounterProps {
 const Counter = ({ value, duration = 2 }: CounterProps) => {
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
-  
-  // Extract number and suffix (e.g., "1000+", "95%")
+
+  // Extract number and suffix (e.g., "1000+", "98%")
   const numericValue = parseInt(value.replace(/[^0-9]/g, ""));
   const suffix = value.replace(/[0-9]/g, "");
-  
+
   const spring = useSpring(0, {
     stiffness: 40,
     damping: 30,
     restDelta: 0.001
   });
-  
-  const displayValue = useTransform(spring, (current) => 
+
+  const displayValue = useTransform(spring, (current) =>
     Math.round(current).toString() + suffix
   );
 
