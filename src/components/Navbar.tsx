@@ -148,77 +148,77 @@ const Navbar = () => {
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-
-        {/* Mobile Nav */}
-        <AnimatePresence>
-          {open && (
-            <>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onClick={() => setOpen(false)}
-                className="fixed inset-0 bg-background/95 backdrop-blur-md z-[100] lg:hidden"
-              />
-              <motion.div
-                initial={{ opacity: 0, x: "100%" }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: "100%" }}
-                transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-card border-l border-border shadow-2xl lg:hidden flex flex-col z-[101]"
-              >
-                <div className="p-6 flex justify-between items-center border-b border-border">
-                  <span className="font-bold text-lg">Menu</span>
-                  <button onClick={() => setOpen(false)} className="p-2 bg-muted rounded-full">
-                    <X size={20} />
-                  </button>
-                </div>
-                <div className="flex-1 overflow-y-auto p-6 flex flex-col gap-2">
-                  {navLinks.map((link, i) => (
-                    <div key={link.label} className="border-b border-border/50 last:border-0 pb-2">
-                      <motion.a
-                        href={link.href}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: i * 0.1 }}
-                        onClick={() => setOpen(false)}
-                        className="text-xl font-bold text-foreground py-3 flex justify-between items-center group"
-                      >
-                        {link.label}
-                        <ArrowRight size={18} className="text-primary group-hover:translate-x-1 transition-transform" />
-                      </motion.a>
-                      {link.dropdown && (
-                        <div className="grid grid-cols-2 gap-2 mt-2 pl-2">
-                          {link.dropdown.map((item) => (
-                            <a 
-                              key={item.label} 
-                              href={link.href} 
-                              className="text-xs font-semibold text-muted-foreground p-2 rounded-lg bg-muted/50"
-                              onClick={() => setOpen(false)}
-                            >
-                              {item.label}
-                            </a>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                  <div className="mt-8">
-                    <motion.a
-                      href="#enquiry"
-                      className="w-full py-4 bg-primary text-primary-foreground rounded-2xl text-lg font-bold text-center shadow-xl block"
-                      onClick={() => setOpen(false)}
-                    >
-                      Admissions Open
-                    </motion.a>
-                    <p className="text-center text-xs text-muted-foreground mt-4">Shaping Future Toppers Since 2014</p>
-                  </div>
-                </div>
-              </motion.div>
-            </>
-          )}
-        </AnimatePresence>
       </nav>
+      
+      {/* Mobile Nav - Moved outside nav to prevent clipping by backdrop-filter height */}
+      <AnimatePresence>
+        {open && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setOpen(false)}
+              className="fixed inset-0 bg-background/95 backdrop-blur-md z-[100] lg:hidden"
+            />
+            <motion.div
+              initial={{ opacity: 0, x: "100%" }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-card border-l border-border shadow-2xl lg:hidden flex flex-col z-[101]"
+            >
+              <div className="p-6 flex justify-between items-center border-b border-border">
+                <span className="font-bold text-lg">Menu</span>
+                <button onClick={() => setOpen(false)} className="p-2 bg-muted rounded-full">
+                  <X size={20} />
+                </button>
+              </div>
+              <div className="flex-1 overflow-y-auto p-6 flex flex-col gap-2">
+                {navLinks.map((link, i) => (
+                  <div key={link.label} className="border-b border-border/50 last:border-0 pb-2">
+                    <motion.a
+                      href={link.href}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.1 }}
+                      onClick={() => setOpen(false)}
+                      className="text-xl font-bold text-foreground py-3 flex justify-between items-center group"
+                    >
+                      {link.label}
+                      <ArrowRight size={18} className="text-primary group-hover:translate-x-1 transition-transform" />
+                    </motion.a>
+                    {link.dropdown && (
+                      <div className="grid grid-cols-2 gap-2 mt-2 pl-2">
+                        {link.dropdown.map((item) => (
+                          <a 
+                            key={item.label} 
+                            href={link.href} 
+                            className="text-xs font-semibold text-muted-foreground p-2 rounded-lg bg-muted/50"
+                            onClick={() => setOpen(false)}
+                          >
+                            {item.label}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+                <div className="mt-8">
+                  <motion.a
+                    href="#enquiry"
+                    className="w-full py-4 bg-primary text-primary-foreground rounded-2xl text-lg font-bold text-center shadow-xl block"
+                    onClick={() => setOpen(false)}
+                  >
+                    Admissions Open
+                  </motion.a>
+                  <p className="text-center text-xs text-muted-foreground mt-4">Shaping Future Toppers Since 2014</p>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 };
