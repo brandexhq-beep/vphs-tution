@@ -43,11 +43,11 @@ const Navbar = () => {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-primary z-[60] origin-left"
+        className="fixed top-0 left-0 right-0 h-1 bg-primary z-[110] origin-left"
         style={{ scaleX }}
       />
       <nav 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
           scrolled 
             ? "h-[68px] glass shadow-elevated" 
             : "h-[88px] bg-transparent"
@@ -158,14 +158,14 @@ const Navbar = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={() => setOpen(false)}
-                className="fixed inset-0 bg-background/95 backdrop-blur-md z-[-1] lg:hidden"
+                className="fixed inset-0 bg-background/95 backdrop-blur-md z-[100] lg:hidden"
               />
               <motion.div
                 initial={{ opacity: 0, x: "100%" }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: "100%" }}
                 transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-card border-l border-border shadow-2xl lg:hidden flex flex-col"
+                className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-card border-l border-border shadow-2xl lg:hidden flex flex-col z-[101]"
               >
                 <div className="p-6 flex justify-between items-center border-b border-border">
                   <span className="font-bold text-lg">Menu</span>
