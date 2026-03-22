@@ -1,4 +1,4 @@
-import { GraduationCap, Phone, MapPin, Facebook, Instagram, Linkedin, Youtube, ArrowUp } from "lucide-react";
+import { GraduationCap, Phone, MapPin, Facebook, Instagram, Linkedin, Youtube, ArrowUp, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -16,28 +16,11 @@ const Footer = () => {
               <div className="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center p-1 overflow-hidden">
                 <img src="/tuition_logo.png" alt="Vignan Logo" className="w-full h-full object-contain" />
               </div>
-              <span className="font-extrabold text-2xl tracking-tighter text-white">VIGNAN<br/><span className="text-[10px] text-primary tracking-[0.3em] uppercase block -mt-1">Tutorials</span></span>
+              <span className="font-extrabold text-2xl tracking-tighter text-white">VIGNAN<br /><span className="text-[10px] text-primary tracking-[0.3em] uppercase block -mt-1">Tutorials</span></span>
             </div>
             <p className="text-primary-foreground/60 leading-relaxed max-w-xs">
               Empowering students with quality education. Unit of Vignan Public High School, Bangalore. Shaping future toppers since 2014.
             </p>
-            <div className="flex gap-4">
-              {[
-                { icon: <Facebook size={20} />, href: "#" },
-                { icon: <Instagram size={20} />, href: "#" },
-                { icon: <Linkedin size={20} />, href: "#" },
-                { icon: <Youtube size={20} />, href: "#" },
-              ].map((social, i) => (
-                <motion.a
-                  key={i}
-                  href={social.href}
-                  whileHover={{ y: -3, color: "var(--primary)" }}
-                  className="p-2.5 rounded-full bg-white/5 border border-white/10 text-primary-foreground/60 hover:bg-white/10 transition-all shadow-sm"
-                >
-                  {social.icon}
-                </motion.a>
-              ))}
-            </div>
           </div>
 
           {/* Sitemap Columns */}
@@ -95,15 +78,37 @@ const Footer = () => {
                 </div>
                 <span>Above Anjaneya Electricals, R.T. Street, B.V.K. Iyengar Road, Bangalore-560053</span>
               </a>
+              <a
+                href="mailto:vignantutorials2026@gmail.com"
+                className="flex items-center gap-3 text-[15px] text-primary-foreground/60 hover:text-white transition-all group"
+              >
+                <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-primary transition-colors">
+                  <Mail size={14} />
+                </div>
+                <span>vignantutorials2026@gmail.com</span>
+              </a>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-primary-foreground/40 font-medium tracking-wide">
-            © {new Date().getFullYear()} VIGNAN TUTORIALS. CRAFTED BY EXCELLENCE.
-          </p>
+          <div className="flex flex-col gap-2">
+            <p className="text-xs text-primary-foreground/40 font-medium tracking-wide">
+              © {new Date().getFullYear()} VIGNAN TUTORIALS. ALL RIGHTS RESERVED.
+            </p>
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] text-primary-foreground/30 uppercase tracking-[0.2em] font-bold">Designed and Managed BY</span>
+              <a
+                href="https://brandex-lab.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-black text-white hover:text-primary transition-colors tracking-tight"
+              >
+                BRANDEX <span className="text-primary">LABS</span>
+              </a>
+            </div>
+          </div>
           <div className="flex gap-6">
             <a href="#" className="text-xs text-primary-foreground/40 hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="text-xs text-primary-foreground/40 hover:text-white transition-colors">Terms of Service</a>

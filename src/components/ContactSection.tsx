@@ -44,7 +44,7 @@ const ContactSection = () => (
               <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-bold text-foreground mb-1">Email</h3>
-                <p className="text-muted-foreground text-sm">info@vignantutorials.com</p>
+                <p className="text-muted-foreground text-sm">vignantutorials2026@gmail.com</p>
               </div>
             </div>
           </div>
@@ -53,7 +53,7 @@ const ContactSection = () => (
         <BlurReveal delay={0.2}>
           <div className="rounded-2xl overflow-hidden shadow-card border border-border h-[300px] lg:h-full min-h-[300px] grayscale hover:grayscale-0 transition-all duration-500">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3514335668333!2d77.5165349!3d13.013278200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d01e6ba3ac9%3A0xef2e35891bf830e1!2sVignan%20Public%20High%20School!5e0!3m2!1sen!2sin!4v1774034592721!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.010407079545!2d77.57405512454665!3d12.97118571488844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae179d75396f7f%3A0xd402f26a5d6a1f70!2sANJANEYA%20ELECTRICALS!5e0!3m2!1sen!2sin!4v1774162833733!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}

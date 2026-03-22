@@ -61,15 +61,15 @@ const Navbar = () => {
             whileTap={{ scale: 0.98 }}
           >
             <motion.div 
-              className={`w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center`}
+              className={`w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center`}
               whileHover={{ rotate: [-5, 5, -5, 0], scale: 1.1 }}
               transition={{ duration: 0.4 }}
             >
               <img src="/tuition_logo.png" alt="Vignan Tutorials Logo" className="w-full h-full object-contain drop-shadow-md" />
             </motion.div>
             <div className="flex flex-col">
-              <span className="font-bold text-xl text-foreground tracking-tighter leading-none">VIGNAN</span>
-              <span className="text-[10px] font-bold text-primary tracking-[0.2em] uppercase mt-0.5">Tutorials</span>
+              <span className="font-bold text-2xl sm:text-3xl text-foreground tracking-tighter leading-none">VIGNAN</span>
+              <span className="text-xs sm:text-sm font-bold text-primary tracking-[0.2em] uppercase mt-0.5">Tutorials</span>
             </div>
           </motion.a>
 
